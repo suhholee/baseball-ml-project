@@ -1,0 +1,35 @@
+# Core Data Science
+numpy>=1.22.0,<2.0.0
+pandas>=1.5.0,<2.0.0
+matplotlib>=3.6.0,<4.0.0
+seaborn>=0.12.0,<0.13.0
+scikit-learn>=1.1.0,<2.0.0
+scipy>=1.9.0,<2.0.0
+
+# Deep Learning
+torch>=2.0.0,<3.0.0
+torchvision>=0.15.0,<0.16.0
+
+# Web Scraping
+requests>=2.28.0,<3.0.0
+
+# Advanced Analytics
+shap>=0.41.0,<0.43.0
+statsmodels>=0.13.0,<0.15.0
+arviz>=0.14.0,<0.16.0
+
+# Google Cloud Platform
+google-cloud-storage>=2.6.0,<3.0.0
+google-cloud-pubsub>=2.13.0,<3.0.0
+google-cloud-scheduler>=2.7.0,<3.0.0
+google-cloud-functions>=1.8.0,<2.0.0
+
+# Development Tools
+pytest>=7.0.0,<8.0.0
+pytest-cov>=4.0.0,<5.0.0
+flake8>=6.0.0,<7.0.0
+black>=23.0.0,<24.0.0
+
+# Utilities
+joblib>=1.1.0,<2.0.0
+tqdm>=4.64.0,<5.0.0
