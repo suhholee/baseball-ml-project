@@ -1,0 +1,30 @@
+{
+  "model_name": "catboost",
+  "accuracy": 0.41508967223252935,
+  "date_trained": "2025-04-10 22:48:15",
+  "num_features": 38,
+  "num_samples": 32340,
+  "params": {
+    "iterations": 472,
+    "learning_rate": 0.010026522473407047,
+    "depth": 10,
+    "l2_leaf_reg": 6.55733358664945,
+    "bootstrap_type": "Bernoulli",
+    "grow_policy": "SymmetricTree"
+  },
+  "selected_features": [
+    "num__bat_speed",
+    "num__swing_length",
+    "num__pz",
+    "num__px",
+    "num__horizontal_release",
+    "num__spin_rate",
+    "num__swing_efficiency_ratio",
+    "num__arm_angle",
+    "num__speed_differential",
+    "num__vertical_release",
+    "num__extension",
+    "num__perceived_velocity",
+    "num__pitch_velocity"
+  ]
+}

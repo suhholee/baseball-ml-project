@@ -1,0 +1,6 @@
+{
+  "model_gcs_uri": "gs://baseball-ml-data/models/final_model_2025-04-10.pkl",
+  "preprocessor_gcs_uri": "gs://baseball-ml-data/preprocessors/preprocessor_2025-04-10.pkl",
+  "model_latest_gcs_uri": "gs://baseball-ml-data/models/final_model_latest.pkl",
+  "preprocessor_latest_gcs_uri": "gs://baseball-ml-data/preprocessors/preprocessor_latest.pkl"
+}
