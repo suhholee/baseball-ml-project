@@ -54,45 +54,7 @@ This end-to-end project demonstrates skills in web scraping, data cleaning, feat
 
 ---
 
-## 📁 Directory Structure
-
-```
-ml-baseball-outcome-predictor/
-├── data/
-│   ├── raw/            # Raw data scraped from Baseball Savant
-│   └── processed/      # Cleaned and processed data
-├── src/
-│   ├── data/           # Data collection and processing scripts
-│   │   ├── scraper.py  # Web scraping functionality
-│   │   └── processor.py # Data preprocessing
-│   ├── models/         # Model training and evaluation
-│   │   ├── train_model.py          # Model training
-│   │   ├── bayesian_optimization.py # Hyperparameter tuning
-│   │   ├── train_final_model.py    # Final model training
-│   │   └── feature_analysis.py     # Feature importance analysis
-├── models/             # Saved models and artifacts
-├── cloud/              # Cloud deployment resources
-│   ├── cloud_function.py           # GCP Cloud Function
-│   └── deploy_cloud_function.sh    # Deployment script
-├── app.py              # Streamlit dashboard application
-└── README.md           # Project documentation
-```
-
----
-
-## 🚀 Google Cloud Integration
-
-- Deployable via:
-  - `cloud_function.py`
-  - `deploy_cloud_function.sh`
-- Weekly scheduled data scraping
-- Data stored to:
-  - `gs://baseball-ml-data/raw/`
-  - `gs://baseball-ml-data/latest/`
-
----
-
-## 🧠 Final Model Summary (may change every model run)
+## 🧠 Model Summary (may change every model run)
 
 ### Model Performance
 - **Model Type**: `CatBoostClassifier`
@@ -148,10 +110,41 @@ This suggests that minimizing the speed gap between bat and pitch is critical fo
 
 ---
 
-## 📈 Future Improvements
+## 📁 Directory Structure
 
-- **Per-Player Model Training**  
-  Train a separate model per player to allow personalized predictions. This will enable the Streamlit dashboard to offer a toggle per player/team and return model predictions based on their unique swing/pitch style.
+```
+ml-baseball-outcome-predictor/
+├── data/
+│   ├── raw/            # Raw data scraped from Baseball Savant
+│   └── processed/      # Cleaned and processed data
+├── src/
+│   ├── data/           # Data collection and processing scripts
+│   │   ├── scraper.py  # Web scraping functionality
+│   │   └── processor.py # Data preprocessing
+│   ├── models/         # Model training and evaluation
+│   │   ├── train_model.py          # Model training
+│   │   ├── bayesian_optimization.py # Hyperparameter tuning
+│   │   ├── train_final_model.py    # Final model training
+│   │   └── feature_analysis.py     # Feature importance analysis
+├── models/             # Saved models and artifacts
+├── cloud/              # Cloud deployment resources
+│   ├── cloud_function.py           # GCP Cloud Function
+│   └── deploy_cloud_function.sh    # Deployment script
+├── app.py              # Streamlit dashboard application
+└── README.md           # Project documentation
+```
+
+---
+
+## 🚀 Google Cloud Integration
+
+- Deployable via:
+  - `cloud_function.py`
+  - `deploy_cloud_function.sh`
+- Weekly scheduled data scraping
+- Data stored to:
+  - `gs://baseball-ml-data/raw/`
+  - `gs://baseball-ml-data/latest/`
 
 ---
 
@@ -212,7 +205,14 @@ functions-framework
 
 ---
 
+## 📈 Future Improvements
+
+- **Per-Player Model Training**  
+  Train a separate model per player to allow personalized predictions. This will enable the Streamlit dashboard to offer a toggle per player/team and return model predictions based on their unique swing/pitch style.
+
+---
+
 ## 💡 Acknowledgments
-MLB Statcast for providing the data
-The baseball analytics community for research and insights
-Open source ML and data science libraries
+- MLB Statcast for providing the data
+- The baseball analytics community for research and insights
+- Open source ML and data science libraries
