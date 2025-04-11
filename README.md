@@ -8,7 +8,7 @@ This end-to-end project demonstrates skills in web scraping, data cleaning, feat
 
 ## 🌐 Streamlit Dashboard
 
-👉 **[Will insert dashboard link here once deployed]**
+👉 **[[Link](https://baseball-ml-app-1027266298945.us-central1.run.app/)]**
 
 ---
 
