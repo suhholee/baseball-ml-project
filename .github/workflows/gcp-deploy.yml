@@ -25,7 +25,10 @@ jobs:
         project_id: ${{ secrets.GCP_PROJECT_ID }}
         
     - name: Configure Docker
-      run: gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev
+      run: |
+        echo "${{ secrets.GCP_SA_KEY }}" | base64 --decode > key.json
+        gcloud auth activate-service-account --key-file=key.json
+        gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev --quiet
       
     - name: Build Docker image
       run: |
