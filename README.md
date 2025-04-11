@@ -179,6 +179,9 @@ python src/models/train_final_model.py
 # Deploy cloud function
 cd src/cloud
 ./deploy_cloud_function.sh your-project-id us-central1
+
+# Run Streamlit
+streamlit run app.py
 ```
 
 ---
@@ -209,6 +212,8 @@ functions-framework
 
 - **Per-Player Model Training**  
   Train a separate model per player to allow personalized predictions. This will enable the Streamlit dashboard to offer a toggle per player/team and return model predictions based on their unique swing/pitch style.
+- **Pitcher/Batter Handedness**  
+  Train a model that considers pitcher and batter handedness and apply that has a mutable value within the dashboard.
 
 ---
 
