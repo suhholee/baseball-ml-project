@@ -1,6 +1,6 @@
 # Ignore everything in models/
 models/*
-data/*
+# data/*
 
 # But keep the final/ directory and its contents
 !models/final/
