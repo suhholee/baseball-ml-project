@@ -14,9 +14,5 @@ __pycache__/
 # Ignore large CSVs
 *.csv
 
-# Ignore logs and reports
-logs/
-reports/
-
 # Ignore MLFlow run files
 src/models/mlruns/*

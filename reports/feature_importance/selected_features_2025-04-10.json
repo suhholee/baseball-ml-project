@@ -1,0 +1,20 @@
+{
+  "selected_features": [
+    "num__bat_speed",
+    "num__swing_length",
+    "num__pz",
+    "num__px",
+    "num__horizontal_release",
+    "num__spin_rate",
+    "num__swing_efficiency_ratio",
+    "num__arm_angle",
+    "num__speed_differential",
+    "num__vertical_release",
+    "num__extension",
+    "num__perceived_velocity",
+    "num__pitch_velocity"
+  ],
+  "importance_threshold": 0.9,
+  "feature_count": 13,
+  "date": "2025-04-10"
+}
