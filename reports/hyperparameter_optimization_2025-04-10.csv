@@ -1,0 +1,5 @@
+,accuracy,params
+random_forest,0.4096474953617811,"{'n_estimators': 328, 'max_depth': 20, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'log2'}"
+xgboost,0.4137291280148423,"{'n_estimators': 252, 'learning_rate': 0.013833507535062179, 'max_depth': 7, 'min_child_weight': 7, 'gamma': 0.6659223566174968, 'subsample': 0.7956488938538636, 'colsample_bytree': 0.6373608964950321, 'reg_alpha': 2.8062171292385063, 'reg_lambda': 1.9146343737689497}"
+light_gbm,0.4137291280148423,"{'n_estimators': 114, 'learning_rate': 0.09150423569345206, 'max_depth': 4, 'num_leaves': 114, 'subsample': 0.9692763545078752, 'colsample_bytree': 0.5003893829205072, 'reg_alpha': 4.961057796456089, 'reg_lambda': 3.087407548138583}"
+catboost,0.41508967223252935,"{'iterations': 472, 'learning_rate': 0.010026522473407047, 'depth': 10, 'l2_leaf_reg': 6.55733358664945, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree'}"
