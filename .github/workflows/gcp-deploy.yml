@@ -1,0 +1,48 @@
+name: Build and Deploy to GCP
+
+on:
+  push:
+    branches: [ main ]
+
+env:
+  PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+  GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+  IMAGE_NAME: baseball-ml-app
+  REGION: us-central1
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Setup Google Cloud SDK
+      uses: google-github-actions/setup-gcloud@v1
+      with:
+        service_account_key: ${{ secrets.GCP_SA_KEY }}
+        project_id: ${{ secrets.GCP_PROJECT_ID }}
+        
+    - name: Configure Docker
+      run: gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev
+      
+    - name: Build Docker image
+      run: |
+        docker build -t ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/baseball-ml/${{ env.IMAGE_NAME }}:${{ github.sha }} .
+        
+    - name: Push Docker image
+      run: |
+        docker push ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/baseball-ml/${{ env.IMAGE_NAME }}:${{ github.sha }}
+        
+    - name: Deploy to Cloud Run
+      uses: google-github-actions/deploy-cloudrun@v1
+      with:
+        service: baseball-ml-app
+        image: ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/baseball-ml/${{ env.IMAGE_NAME }}:${{ github.sha }}
+        region: ${{ env.REGION }}
+        service_account: baseball-ml@baseball-ml.iam.gserviceaccount.com
+        
+    - name: Show deployed service URL
+      run: |
+        echo "Deployed to: $(gcloud run services describe baseball-ml-app --region=${{ env.REGION }} --format='value(status.url)')"

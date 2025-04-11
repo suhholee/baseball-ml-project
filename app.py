@@ -250,7 +250,7 @@ if model is None:
     st.warning("⚠️ Model not loaded. Using mock predictions for demonstration.")
 
 # Create tabs for the app - just 2 tabs as requested
-tabs = st.tabs(["Predictor", "Contact"])
+tabs = st.tabs(["Predictor", "Contact Me!"])
 
 with tabs[0]:  # Predictor tab
     col1, col2 = st.columns([1, 1])
@@ -259,13 +259,13 @@ with tabs[0]:  # Predictor tab
         st.markdown('<div class="section-header">Input Parameters</div>', unsafe_allow_html=True)
         
         with st.expander("Pitch Characteristics", expanded=True):
-            pitch_velocity = st.slider("Pitch Velocity (MPH)", min_value=70.0, max_value=105.0, value=92.0, step=0.5,
+            pitch_velocity = st.slider("Pitch Velocity (MPH)", min_value=70.0, max_value=105.0, value=92.0, step=0.1,
                                     help="The speed of the pitch when it leaves the pitcher's hand")
             
-            perceived_velocity = st.slider("Perceived Velocity (MPH)", min_value=70.0, max_value=105.0, value=92.5, step=0.5,
+            perceived_velocity = st.slider("Perceived Velocity (MPH)", min_value=70.0, max_value=105.0, value=92.5, step=0.1,
                                         help="The effective velocity as perceived by the batter, accounting for extension")
             
-            spin_rate = st.slider("Spin Rate (RPM)", min_value=1000, max_value=3500, value=2200, step=50,
+            spin_rate = st.slider("Spin Rate (RPM)", min_value=1000, max_value=3500, value=2200, step=10,
                                 help="The rate at which the ball spins after being released")
             
             pitch_type = st.selectbox("Pitch Type", 
@@ -277,30 +277,30 @@ with tabs[0]:  # Predictor tab
             col_loc1, col_loc2 = st.columns(2)
             
             with col_loc1:
-                px = st.slider("Horizontal Location (ft)", min_value=-2.0, max_value=2.0, value=0.0, step=0.1,
+                px = st.slider("Horizontal Location (ft)", min_value=-2.0, max_value=2.0, value=0.0, step=0.01,
                             help="Negative values are inside to right-handed batter")
                 
-                vertical_release = st.slider("Vertical Release (ft)", min_value=3.0, max_value=7.0, value=5.5, step=0.1,
+                vertical_release = st.slider("Vertical Release (ft)", min_value=3.0, max_value=7.0, value=5.5, step=0.01,
                                         help="Height of pitch release point")
                 
-                extension = st.slider("Extension (ft)", min_value=5.0, max_value=8.0, value=6.5, step=0.1,
+                extension = st.slider("Extension (ft)", min_value=5.0, max_value=8.0, value=6.5, step=0.01,
                                     help="Distance from pitching rubber at release")
             
             with col_loc2:
-                pz = st.slider("Vertical Location (ft)", min_value=0.5, max_value=5.0, value=2.5, step=0.1,
+                pz = st.slider("Vertical Location (ft)", min_value=0.5, max_value=5.0, value=2.5, step=0.01,
                             help="Height of the pitch as it crosses home plate")
                 
-                horizontal_release = st.slider("Horizontal Release (ft)", min_value=-3.0, max_value=3.0, value=0.0, step=0.1,
+                horizontal_release = st.slider("Horizontal Release (ft)", min_value=-3.0, max_value=3.0, value=0.0, step=0.01,
                                             help="Lateral position of pitch release point")
                 
-                arm_angle = st.slider("Arm Angle (degrees)", min_value=0.0, max_value=90.0, value=45.0, step=1.0,
+                arm_angle = st.slider("Arm Angle (degrees)", min_value=0.0, max_value=90.0, value=45.0, step=0.1,
                                     help="Angle of the pitcher's arm at release")
         
         with st.expander("Swing Mechanics", expanded=True):
-            bat_speed = st.slider("Bat Speed (MPH)", min_value=60.0, max_value=95.0, value=75.0, step=0.5,
+            bat_speed = st.slider("Bat Speed (MPH)", min_value=60.0, max_value=95.0, value=75.0, step=0.1,
                                 help="Speed of the bat at the moment of contact")
             
-            swing_length = st.slider("Swing Length (ft)", min_value=4.0, max_value=10.0, value=6.5, step=0.1,
+            swing_length = st.slider("Swing Length (ft)", min_value=4.0, max_value=10.0, value=6.5, step=0.01,
                                     help="Distance the bat travels during the swing")
             
             # Derived metrics (calculated automatically)
