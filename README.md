@@ -202,6 +202,7 @@ mlflow
 joblib
 beautifulsoup4
 requests
+streamlit
 google-cloud-storage
 functions-framework
 ```

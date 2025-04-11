@@ -4,7 +4,7 @@ import numpy as np
 import joblib
 import logging
 from datetime import datetime
-from sklearn.model_selection import train_test_split, cross_val_score
+from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import skopt

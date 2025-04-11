@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import time
 import os
-from typing import Optional
 from google.cloud import storage
 
 def scrape_statcast_data(url):

@@ -1,13 +1,11 @@
 import os
 import pandas as pd
 import numpy as np
-import pickle
 import mlflow
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, accuracy_score, precision_recall_fscore_support
-from sklearn.preprocessing import LabelEncoder
 import joblib
 from datetime import datetime
 import logging
