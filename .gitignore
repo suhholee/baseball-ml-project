@@ -1,6 +1,5 @@
 # Ignore everything in models/
 models/*
-# data/*
 
 # But keep the final/ directory and its contents
 !models/final/
@@ -10,9 +9,6 @@ models/*
 .DS_Store
 *.pyc
 __pycache__/
-
-# Ignore large CSVs
-# *.csv
 
 # Ignore MLFlow run files
 src/models/mlruns/*

@@ -158,7 +158,7 @@ def save_to_gcs(df, bucket_name, filename):
     
     return f"gs://{bucket_name}/{filename}"
 
-def main(local_save=True, gcs_upload=False, seasons=None):
+def main(local_save=True, gcs_upload=True, seasons=None):
     """
     Main function to scrape, clean, and save Statcast data
     
@@ -258,4 +258,4 @@ def main(local_save=True, gcs_upload=False, seasons=None):
 
 if __name__ == '__main__':
     # When running locally, scrape data from 2023, 2024, and 2025
-    main(local_save=True, gcs_upload=False, seasons=[2023, 2024, 2025])
+    main(local_save=True, gcs_upload=True, seasons=[2023, 2024, 2025])
