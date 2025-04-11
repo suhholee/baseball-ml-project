@@ -212,7 +212,7 @@ functions-framework
 ## 📈 Future Improvements
 
 - **Model Training Automation**  
-  Automate model training and evaluation to trigger after each new data scraping job using Cloud Scheduler and Cloud Functions (or Cloud Run). This would ensure the model stays up to date without manual intervention.
+  Automate model training and evaluation to trigger after each new data scraping job using Cloud Scheduler and Cloud Functions. This would ensure the model stays up to date without manual intervention.
   - Note: Due to limited GCP credits, model retraining is currently performed manually to control compute usage.
 - **Per-Player Model Training**  
   Train a separate model per player to allow personalized predictions. This will enable the Streamlit dashboard to offer a toggle per player/team and return model predictions based on their unique swing/pitch style.
