@@ -49,7 +49,6 @@ jobs:
         service: baseball-ml-app
         image: ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/baseball-ml/${{ env.IMAGE_NAME }}:${{ github.sha }}
         region: ${{ env.REGION }}
-        service_account: baseball-ml@baseball-ml.iam.gserviceaccount.com
         
     - name: Show deployed service URL
       run: |
