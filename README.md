@@ -8,7 +8,7 @@ This end-to-end project demonstrates skills in web scraping, data cleaning, feat
 
 ## 🌐 Streamlit Dashboard
 
-👉 **[[Link](https://baseball-ml-app-1027266298945.us-central1.run.app/)]**
+👉 **[Launch the app](https://baseball-ml-app-1027266298945.us-central1.run.app/)**: Alter swing and pitch values to predict batted outcomes!
 
 ---
 
@@ -25,32 +25,32 @@ This end-to-end project demonstrates skills in web scraping, data cleaning, feat
    - Engineers domain-specific features: swing efficiency, pitch location categorization, pitch type categorization, outcome grouping
 
 3. **Model Training**  
-   Trains four types of classifiers:
-   - Random Forest
-   - XGBoost
-   - LightGBM
-   - CatBoost  
-   The best model is selected based on accuracy.
-   - Tracked all experiments and models using **MLflow**, including:
-     - Model parameters, metrics, artifacts, and versioning
-     - Comparison across multiple classifier types and optimization stages
+   - Trained four types of classifiers:
+      - Random Forest
+      - XGBoost
+      - LightGBM
+      - CatBoost 
+   - The best model is selected based on accuracy.
+      - Tracked all experiments and models using **MLflow**, including:
+        - Model parameters, metrics, artifacts, and versioning
+        - Comparison across multiple classifier types and optimization stages
 
 4. **Hyperparameter Optimization**  
    Applies Bayesian optimization (via `scikit-optimize`) to fine-tune model performance.
 
 5. **Feature Importance Analysis**  
-   Combines:
-   - Built-in feature importance
-   - Permutation importance
-   - SHAP values  
-   Results are saved as CSV and plots under `reports/feature_importance`.
+   - Combines:
+      - Built-in feature importance
+      - Permutation importance
+      - SHAP values  
+   - Results are saved as CSV and plots at `reports/feature_importance`.
 
 6. **Model Deployment & Storage**  
    - Saves models locally and uploads the latest versions to GCS.
    - Supports weekly automated data refreshes via GCP Cloud Functions and Scheduler.
 
 7. **📊 Streamlit Dashboard**  
-   _[To Be Added]_ – A Streamlit dashboard will allow users to upload swing/pitch inputs and view predicted outcomes.
+   - A Streamlit dashboard allows users to upload swing/pitch inputs and view predicted outcomes.
 
 ---
 
