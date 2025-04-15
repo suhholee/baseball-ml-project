@@ -128,7 +128,7 @@ ml-baseball-outcome-predictor/
 │   │   └── feature_analysis.py     # Feature importance analysis
 ├── models/             # Saved models and artifacts
 ├── cloud/              # Cloud deployment resources
-│   ├── cloud_function.py           # GCP Cloud Function
+│   ├── main.py           # GCP Cloud Function
 │   └── deploy_cloud_function.sh    # Deployment script
 ├── app.py              # Streamlit dashboard application
 └── README.md           # Project documentation
@@ -139,7 +139,7 @@ ml-baseball-outcome-predictor/
 ## 🚀 Google Cloud Integration
 
 - Deployable via:
-  - `cloud_function.py`
+  - `main.py`
   - `deploy_cloud_function.sh`
 - Weekly scheduled data scraping
 - Data stored to:
